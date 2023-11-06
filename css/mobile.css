@@ -35,13 +35,12 @@
     .none{
         display: block;
         position: absolute;
-        right: 2%;
     }
     .m-btn{
         width: 40px;
         background-color: #fff;
         position: absolute;
-        right: 2%;
+        right: 10%;
         top: 37px;
         height: 4px;
     }
