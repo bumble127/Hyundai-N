@@ -1,0 +1,392 @@
+@charset "utf-8";
+
+.container{
+    position: relative;
+    width: 100%;
+    min-width: 1200px;
+    margin: 0 auto;
+}
+
+.video{
+    position: relative;
+    z-index: -99;
+    min-width: 1200px;
+}
+.video-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: 10.625rem;
+    margin-top: 300px;
+}
+.video-text strong{
+    display: block;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: -0.09rem;
+}
+.video-text span{
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.cont-bg{
+    margin-top: -1%;
+    background-color: #000;
+    position: relative;
+}
+.container .nav-wrap{
+    position: absolute;
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #222;
+    line-height: 80px;
+    z-index: 99;
+}
+
+.nav-wrap .nav{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-wrap .nav .logo{
+    float: left;
+    color: #fff;
+    margin-right: 66px;
+    font-size: 20px;
+}
+.nav-wrap .nav .gnb{
+    overflow: hidden;
+    text-align: center;
+}
+.nav-wrap .nav .gnb li{
+    float: left;
+    width: 170px;
+}
+.nav-wrap .nav .gnb .active{
+    content: '';
+    background-color: #ff2600;
+    transition: all 0.1s ease;
+    height: 80px;
+}
+.nav-wrap .nav .gnb li a{
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.elantra-main{
+    width: 1200px;
+    padding-top: 266px;
+    margin: 0 auto;
+}
+
+.N-spec{
+    height: 780px;
+    position: relative;
+    padding-top: 90px;
+}
+.N-spec .name{
+    text-align: center;
+    font-size: 200px;
+    font-weight: 700;
+    color: #ababab;
+}
+.elantra{
+    position: relative;
+    margin-top: -70px;
+}
+.elantra .img_box{
+    position: absolute;
+    margin-left: 10px;
+    z-index: 1;
+}
+.spec-box{
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    margin-top: 280px;
+}
+.power-box{
+    width: 311px;
+    height: 335px;
+    background: url(../images/power_img.png);
+}
+.torque-box{
+    width: 466px;
+    height: 335px;
+    background: url(../images/torque_img.png);
+}
+.speed-box{
+    width: 423px;
+    height: 335px;
+    background-color: #929292;
+}
+.text{
+    color: #fff;
+    text-align: center;
+    margin: 120px 0;
+}
+.power-box strong,
+.torque-box strong,
+.speed-box strong{
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+}
+.power-box span,
+.torque-box span,
+.speed-box span{
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff2600;
+}
+
+.Exterior,
+.Interior {
+    position: relative;
+    padding-top: 100px;
+}
+.exTop {
+    display: flex;
+    justify-content: flex-end;
+}
+.ex-text,
+.Int-text {
+    color: #fff;
+}
+.ex-text h3,
+.Int-text h3 {
+    font-size: 2.5rem;
+}
+.ex-text strong,
+.Int-text strong{
+    font-size: 20px;
+    font-weight: 600;
+}
+.ex-text p,
+.Int-text p {
+    line-height: 1.6;
+    font-size: 14px;
+    margin-top: 19px;
+}
+
+.exBot,
+.IntBot {
+    margin-top: 18px;
+    position: relative;
+}
+.exBot .side,
+.IntBot .inte3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.IntTop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Performence-section{
+    margin-top: 200px;
+    /* height: 1580px; */
+}
+.perfor-box{
+    padding-top: 76px;
+}
+.perfor-txt{
+    text-align: center;
+}
+.perfor-txt h3{
+    font-size: 3.125rem;
+    font-weight: 900;
+    color: #ff0000;
+}
+.perfor-txt strong{
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #fff;
+}
+.perfor-txt p{
+    font-size: 1.25rem;
+    color: #fff;
+    margin-top: 50px;
+    line-height: 1.5;
+}
+.engine-box{
+    width: 1200px;
+    background: url(../images/engineBg.png) no-repeat;
+    background-size: cover;
+    margin-top: 175px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.engine-text{
+    padding: 90px 10px;
+    color: #fff;
+}
+.engine-text strong{
+    font-size: 30px;
+    font-weight: 600;
+    display: block;
+    padding-bottom: 40px;
+}
+.cont1 .power{
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 40px;
+}
+.cont1 .HP{
+    margin-left: 30px;
+    font-size: 20px;
+}
+.cont1 p{
+    font-size: 18px;
+    font-weight: 200;
+}
+.cont2{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.cont2 span{
+    font-size: 30px;
+    font-weight: 600;
+}
+.cont2 .txt2,
+.cont3 .seconds{
+    font-size: 20px;
+    margin-left: 30px;
+    font-weight: 400;
+}
+.cont3 span{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.tech-section{
+    margin-top: 200px;
+    background: url(../images/technologyBg.png) no-repeat;
+}
+.tech-box{
+    position: relative;
+}
+
+.tech-box h3{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 100px;
+    color: #fff;
+}
+.tech_1,
+.tech_2,
+.tech_3 {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 40px;
+}
+.tech-list,
+.tech-list1 {
+    width: 280px;
+}
+.img,
+.img1 {
+    padding:10px 55px;
+}
+.tech-list span,
+.tech-list1 span{
+    display: block;
+}
+.te-text{
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+/* gallery */
+.photo-slider{
+    width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #000;
+    padding-top: 40px;
+}
+.photo-slider .slider-title{
+    text-align: center;
+    padding: 30px 0;
+    color: #fff;
+    font-size: 128px;
+    font-weight: 700;
+    font-family: 'amiri','sans-serif';
+}
+.swiper-container{
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #000;
+}
+.swiper-slide {
+    background-size: 100%;
+    background-position: center;
+}
+.gallery-top {
+    height: 80%;
+    width: 100%;
+}
+.gallery-thumbs {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+.gallery-thumbs .swiper-slide {
+    height: 100%;
+    opacity: 0.4;
+}
+.gallery-thumbs .swiper-slide-active {
+    opacity: 1;
+}
+
+.sub-wrap{
+    margin-top: 230px;
+    height: 480px;
+}
+.sub-wrap .N{
+    width: 1200px;
+    display: flex;
+    justify-content: flex-start;
+}
+.N-box{
+    position: relative;
+    width: 504px;
+    height: 480px;
+}
+.f-image{
+    position: absolute;
+}
+.n-text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    
+    padding: 50px 0px;
+}
+.n-text p{
+    font-size: 40px;
+    color: #fff;
+    padding-bottom: 20px;
+    font-weight: 900;
+}
+.n-text .tx{
+    font-size: 20px;
+    font-weight: 400;
+}

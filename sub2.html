@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorsport</title>
+
+    <meta name="keywords" content="현대, 현대자동차, hyundai, N, Hyundai N" />
+    <meta name="description" content="현대자동차 N 브랜드" />
+    <meta name="author" content="my" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HYUNDAI N">
+    <meta property="og:description" content="현대자동차 N 브랜드 사이트에 오신것을 환영합니다.">
+    <meta property="og:image" content="https://www.hyundai.com/content/dam/hyundai/ww/en/images/main/hyundai-open-graph-image-pc.jpg" id="og-image-value"/>
+
+    <link rel="icon" href="favicon.png">
+    <link rel="apple-tocuch-icon" href="favicon.png">
+
+    <script src="https://kit.fontawesome.com/5184a0146e.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/sub2_main.css">
+
+    <script>
+        $(document).ready(function(){
+            var bg = $('<div class=subbg></div>');
+            $('.navbar').after(bg)
+
+            var el = $('.navbar > ul > li > a');
+            el.on({
+            mouseenter:function(){
+                $(this).css('color','#0075ff')
+                $('.subMenu').stop().slideDown();
+            },
+            mouseleave:function(){
+                $(this).css('color','#fff')
+                $('.subMenu').stop().slideUp();
+                }
+            })
+
+            $('.subMenu').on({
+            mouseenter:function(){
+                $('.subMenu').stop().slideDown();
+            },
+            mouseleave:function(){
+                $('.subMenu').stop().slideUp();
+                }
+            })
+
+            // search
+            $('.search-icon').on('click',function(){
+                $('.search-tab').stop().slideDown();
+            })
+            $('.search-close').on('click',function(){
+                $(this).parents().find('.search-tab').slideUp();
+            })
+
+            // Rtune
+            $('.R-list li').click(function(){
+                var idx = $(this).index();
+                $('.R-list li a').removeClass('on');
+                $('.R-list li a').eq(idx).addClass('on');
+                $('.carList > div').hide();
+                $('.carList > div').eq(idx).show();
+            })
+        })
+
+        function tabMenu(tName){
+            $(tName+ '> li > ul:gt(0)').hide()
+            $(tName+ '> li > a').on('click',function(){
+                $(tName+'> li > a.on').removeClass('on')
+                $(this).addClass('on')
+                $(tName+ '> li > ul').hide();
+                $(this).next('ul').show();
+            })
+        }
+        $(document).ready(function(){
+            tabMenu('.track-list')
+        })
+    </script>
+</head>
+<body>
+    <div id="skip_menu">
+        <a href="#container">본문바로가기</a>
+        <a href="#gnb">주메뉴바로가기</a>
+    </div>
+
+    <div id="wrapper">
+        <header class="header_">
+            <div class="inner clearfix">
+                <div class="menu-group">
+                    <div class="logo">
+                        <a href="index.html"><h1>HYUNDAI N</h1></a>
+                    </div>
+
+                    <nav class="navbar">
+                        <h2 class="skip">주메뉴</h2>
+                        <ul class="main-menu float--left">
+                            <li>
+                                <a href="sub1.html">Models</a>
+                                <ul class="subMenu">
+                                    <li><a href="#none">N</a></li>
+                                    <li><a href="#none">N Line</a></li>
+                                    <li><a href="#none">Rolling Lab</a></li>
+                                    <li><a href="#none">Concept</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">Brand</a>
+                                <ul class="subMenu">
+                                    <li><a href="#none">About N</a></li>
+                                    <li><a href="#none">History</a></li>
+                                    <li><a href="#none">DNA</a></li>
+                                    <li><a href="#none">People</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="sub2.html">Motorsport</a>
+                                <ul class="subMenu">
+                                    <li><a href="#none">WRC</a></li>
+                                    <li><a href="#none">TCR</a></li>
+                                    <li><a href="#none">Nürburgring 24 Hours</a></li>
+                                    <li><a href="#none">Hyundai N Festival</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">Exprience</a>
+                                <ul class="subMenu">
+                                    <li><a href="#none">N Performence</a></li>
+                                    <li><a href="#none">Driving Exprience</a></li>
+                                    <li><a href="#none">WorldSBK</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">Media</a>
+                                <ul class="subMenu">
+                                    <li><a href="#none">N-Zine</a></li>
+                                    <li><a href="#none">Press</a></li>
+                                    <li><a href="#none">Social Lounge</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">N Zone</a>
+                                <ul class="subMenu">
+                                    <li><a href="#none">Ntertainment</a></li>
+                                    <li><a href="#none">N Merchandise</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="link_wrap float--right">
+                            <li><a href="#none"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#none"><i class="fa-brands fa-youtube"></i></a></li>
+                            <div class="search-wrap">
+                                <div class="icon-box">
+                                    <ul class="search-icon">
+                                        <li><a href="#none">검색아이콘</a></li>
+                                    </ul>
+                                </div>
+                                <div class="search-tab">
+                                    <div class="search-form">
+                                        <form action="#" method="post" name="header-search" class="header-search">
+                                            <input type="search" class="search-text" name="search-text" placeholder="검색어를 입력하세요">
+                                            <span class="search-btn"><a href="#none">검색</a></span>
+                                        </form>
+                                        <span class="search-close"><a href="#none">검색창닫기</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <section class="main-section">
+            <article class="main"></article>
+            <article class="main-text">
+                <strong>현대 N 페스티벌</strong>
+                <P class="txt">
+                    속도의 한계를 극복하고 새로운 가능성에 도전하는<br/>
+                    국내 최대 규모의 원메이크 레이스입니다.
+                </P>
+            </article>
+        </section>
+
+        <section class="container">
+            <section class="title">
+                <h1 class="oneMakeRace">원메이크 레이스란?</h1>
+
+                <div class="OMR-pic clearfix">
+                    <img src="images/onemakerace.png" alt="">
+                </div>
+                <div class="OMR-text">
+                    <p>
+                        원메이크 레이스는 참가자 모두 같은 차를 이용해 치르는 경주를 뜻합니다.<br/>
+                        레이스에 필요한 개조 사양까지 모두 동일하게 맞추죠.<br/>
+                        같은 조건에서 운전 실력을 겨루는 것입니다.<br/>
+                        현대 N 페스티벌과 같은 원메이크 레이스에서는 규정 외의 튜닝을 허용하지 않습니다.<br/> 
+                        그래서 참가에 드는 비용이 적은 편입니다.<br/>
+                        아마추어가 적극적으로 참여할 수 있는 원동력이죠.
+                    </p>
+                </div>
+            </section>
+
+            <section class="Nfesta-bg">
+                <section class="Nfesta-wrap">
+                    <article class="festa-top">
+                        <h1>N 페스티벌, 최소한의 개조만으로 참가할 수 있는 모두의 축제</h1>
+                        <span>
+                            현대 N 페스티벌은 누구에게나 열려있습니다.<br/>
+                            서킷 주행 입문 과정인 타임 트라이얼(Time Trial)과 스프린트(Sprint) 방식의 레이스로 나뉘며,<br/>
+                            N3 클래스인 아반떼 N-라인컵, N2 클래스인 벨로스터 N컵, N1 클래스인 아반떼 N컵 등<br/>
+                            순서대로 하나씩 단계를 밟으며 성장할 수 있는 구조입니다.<br/>
+                        </span>
+                    </article>
+                
+                    <div class="festa-list clearfix">
+                        <article class="festa-left">
+                            <h1 class="left-title">
+                                타임트라이얼<br/>
+                                (Time Trial)
+                            </h1>
+                            <div class="left-pic">
+                                <img src="images/time-trial.png" alt="">
+                            </div>
+                            <div class="left-text">
+                                <p>
+                                    전체 참가자가 정해진 시간 동안 주행하여 한 바퀴의 랩을<br/>
+                                    가장 빠른 기록으로 주행한 순으로 포인트를 부여하며,<br/>
+                                    각 회차 별 포인트를 합산하여 최종 순위가 결정되는 레이스입니다.<br/>
+                                    <span>좋은 성적을 거두려면 가장 이상적인 궤적을 그리며 달려야 합니다.<br/>
+                                    하지만 많은 차들이 함께 달리기에 라인을 잡기가 쉽지 않죠.<br/>
+                                    그래서 다른 선수와 겹치지 않도록 간격을 계산하며 달리다<br/>
+                                    기회가 왔을 때 최고의 기록을 내야 합니다.<br/>
+                                    이런 경험이 모여 레이서로의 성장을 이끌죠.</span>
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="festa-right">
+                            <h1 class="right-title">
+                                스프린트레이스<br/>
+                                (Sprint)
+                            </h1>
+                            <div class="right-pic">
+                                <img src="images/sprient-race.png" alt="">
+                            </div>
+                            <div class="right-text">
+                                <p>
+                                    예선을 치러 빠른 순서대로 결승 그리드(Grid)를 배정받고,<br/>
+                                    결승에서는 동시에 출발해 정해진 랩을 돌아 결승선을 통과한 순서대로 순위를 매깁니다.<br/>
+                                    추월과 방어를 위한 온갖 운전 기술과 전략 싸움이 펼쳐지는 경쟁전이라 할 수 있죠.<br/>
+                                </p>
+
+                                <div class="step1">
+                                    <span>Step 1. 예선</span>
+                                    <p>
+                                        전체 참가자가 정해진 시간 동안 주행하여 한 바퀴의 랩을 가장 빠른 기록으로 주행한<br/>
+                                        순으로 결승 그리드를 배정합니다.
+                                    </p>
+                                </div>
+                                <div class="step2">
+                                    <span>Step 2. 결승</span>
+                                    <p>
+                                        전체 참가자가 동시에 출발하여 정해진 바퀴 수를 가장 빠르게<br/>
+                                        완주하는 순으로 순위가 배정됩니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="festa-bottom">
+                            <div class="Ncup clearfix">
+                                <div>
+                                    <img src="images/avanteNcup.png" alt="">
+                                </div>
+                                <div class="Ncup-text txt">
+                                    <h1>[N1] 아반떼 N 컵 (AVANTE N Cup)</h1>
+                                    <p>서킷 레이스만을 위해 개조된 고성능 N의 원메이크 레이스로,<br/>
+                                        국내 최상위 드라이버들이 참가하는 최고 클래스를 통해<br/>
+                                        극강의 짜릿함을 느낄 수 있습니다.<br/>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="VNcup clearfix">
+                                <div>
+                                    <img src="images/velosterNcup.png" alt="">
+                                </div>
+                                <div class="VNcup-text txt">
+                                    <h1>[N2] 벨로스터 N 컵 (VELOSTER N Cup)</h1>
+                                    <p>서킷에서 태어나 레이스에 최적화된 고성능 N의 원메이크 레이스로,<br/>
+                                        N 특유의 스릴 넘치는 퍼포먼스를 통해 드라이빙의 한계를 뛰어넘는<br/>
+                                        즐거움을 체험할 수 있습니다.<br/>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="Nlinecup clearfix">
+                                <div>
+                                    <img src="images/Nlinecup.png" alt="">
+                                </div>
+                                <div class="Nlinecup-text txt">
+                                    <h1>[N3] 아반떼 N Line컵 (Nline cup)</h1>
+                                    <p>국내 현존하는 원메이크 레이스 중 가장 오래된 역사를 보유한 <br/>
+                                        원메이크 레이스로, N의 DNA를 담아 보다 다이내믹한 드라이빙을<br/>
+                                        선사하는 아반떼 N라인 차량으로 참가할 수 있습니다.<br/>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </section>
+
+            <section class="race-office">
+                <h1>참가안내</h1>
+
+                <article class="office-left">
+                    <h3>대회 참가 자격</h3>
+                    
+                    <div class="all">
+                        <strong>&#91;공통&#93;</strong>
+                        <p>
+                            선수 등록 및 R-Tune 차량 소지<br/>
+                            참가 서킷별 유효 서킷 라이선스 보유<br/>
+                            2종 보통 이상의 유효한 운전면허 소지<br/>
+                        </p>
+                    </div>
+
+                    <div class="veloster-cup">
+                        <strong>&#91;벨로스터 N 컵&#93;</strong>
+                        <span>KARA에서 발급한 유효한 드라이버 라이선스 C 이상 보유자 및 아래 자격 충족자</span>
+                        <p>
+                            &#45; 현대 N 페스티벌 기존 참가자<br/>
+                            - KARA 공인 스프린트 또는 타임 트라이얼 대회 참가 이력 보유자
+                        </p>
+                        <p class="velN_">&#42;해당 이력이 없는 참가자는 [N TT] 1회 참가 또는 HMG 레벨3 이수, 기타 공인 드라이빙 스쿨 이수 후 참가 가능</p>
+                    </div>
+
+                    <div class="veloster-tt">
+                        <strong>&#91;벨로스터 N 타임 트라이얼&#93;</strong>
+                        <span>KARA에서 발급한 유효한 드라이버 라이선스 D 이상 보유자</span>
+                        <p>
+                            &#45;[N1], [N2], [N3]에서 입상한 이력이 있는 참가자는 출전 불가
+                        </p>
+                        <p class="velN_">&#42;해당 이력이 없는 참가자는 [N TT] 1회 참가 또는 HMG 레벨3 이수, 기타 공인 드라이빙 스쿨 이수 후 참가 가능</p>
+                    </div>
+
+                    <div class="aventeNline-cup">
+                        <strong>&#91;아반떼 N Line 컵&#93;</strong>
+                        <span>KARA에서 발급한 유효한 드라이버 라이선스 C 이상 보유자</span>
+                    </div>
+
+                    <div class="aventeNline-tt">
+                        <strong>&#91;아반떼 N Line 타임 트라이얼&#93;</strong>
+                        <span>KARA에서 발급한 유효한 드라이버 라이선스 D 이상 보유자</span>
+                        <p>
+                            &#45; [N1], [N2], [N3]에서 입상한 이력이 있는 참가자는 출전 불가
+                        </p>
+                    </div>
+
+                    <div class="aventeN-tt">
+                        <strong>&#91;아반떼 N 타임 트라이얼&#93;</strong>
+                        <span>KARA에서 발급한 유효한 드라이버 라이선스 D 이상 보유자</span>
+                        <p>
+                            &#45; [N1], [N2], [N3]에서 입상한 이력이 있는 참가자는 출전 불가
+                        </p>
+                    </div>
+                </article>
+
+                <article class="office-right">
+                    <h3>대회 참가 방법</h3>
+
+                    <div class="step-box">
+                        <div class="1">
+                            <strong>Step 1. 선수등록 및 차량 R-Tune</strong>
+                            <p>유선으로 문의 (070-4773-7670~3)</p>
+                        </div>
+
+                        <div class="2">
+                            <strong>Step 2. 규정 숙지</strong>
+                            <p>현대 N 페스티벌 규정 바로가기</p>
+                        </div>
+
+                        <div class="3">
+                            <strong>Step 3. 참가 신청</strong>
+                            <p>정해진 일정 (대회 20일 전 ~ 대회 10일 전)에 홈페이지를 통한 참가 신청 접수</p>
+                        </div>
+                    </div>
+
+                    <div class="cost">
+                        <strong>&#91;참가비&#93;</strong>
+                        <div class="sprint">
+                            <span>sprint</span>
+                            <p>
+                                [N1] AVANTE N Cup (Pro) : 35만원<br/>
+                                [N1] AVANTE N Cup (AM) : 25만원<br/>
+                                [N2] VELOSTER N Cup : 15만원<br/>
+                                [N3] AVANTE N Line Cup : 15만원<br/>
+                            </p>
+                        </div>
+                        <div class="time-trial">
+                            <span>Time-trial</span>
+                            <p>
+                                [N TT] AVANTE N Time-trial : 10만원<br/>
+                                [N TT] VELOSTER N Time-trial : 10만원<br/>
+                                [N TT] AVANTE N Line Time-trial : 10만원<br/>
+                            </p>
+                        </div>
+
+                        <div class="cansle-box">
+                            <span>대회 취소 안내</span>
+                            <p>
+                                폭우, 폭설, 태풍, 강풍, 전염병 등의 자연재해 및 정부와 지자체의 명령 등에 따라<br/>
+                                행사가 취소될 수 있습니다. 취소 확정 시, 사전 고지 드리며 구매하신 금액은 전액 환불 됩니다.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="R-tune-wrap">
+                <div class="R-bg">
+
+                    <div class="R-tuneBox">
+                        <h3>R-TUNE</h3>
+                        <ul class="R-list" id="R-list">
+                            <li>
+                                <a href="#none" class="on">아반떼N컵</a>
+                            </li>
+                            <li>
+                                <a href="#none">벨로스터N컵</a>
+                            </li>
+                            <li>
+                                <a href="#none">아반떼N Line컵</a>
+                            </li>
+                            <li>
+                                <a href="#none">아반떼N TT</a>
+                            </li>
+                            <li>
+                                <a href="#none">벨로스터N TT</a>
+                            </li>
+                            <li>
+                                <a href="#none">아반떼N Line TT</a>
+                            </li>
+                        </ul>
+
+                        <div class="carList">
+                            <div class="cupCar on">
+                                <div class="image-section">
+                                    <div class="image">
+                                        <img src="images/avN.png" alt="">
+                                    </div>
+
+                                    <div class="btn-wrap">
+                                        <a href="#none">
+                                            R-tune 신청 바로가기
+                                            <i><img src="images/wheel_icon.png" alt=""></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-box">
+                                    <dl>
+                                        <dt>타이어</dt>
+                                        <dd>금호타이어 S700 245/645/18</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>휠</dt>
+                                        <dd>ASA 아반떼 N Cup 전용 휠 (9J+45)</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>휠 너트</dt>
+                                        <dd>아반떼 N Cup 전용 알루미늄 휠 너트</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>롤케이지</dt>
+                                        <dd>아반떼 N Cup 전용 롤케이지</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>브레이크 패드</dt>
+                                        <dd>파지드 RST-1 / RST-5</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>견인 고리</dt>
+                                        <dd>견인 스트랩 : Sabelt Tow Strap</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>소화기</dt>
+                                        <dd>의무 사항 (안전장구류)</dd>
+                                    </dl>
+                                    <p>※ 품번 및 기타 옵션 파츠는 현대 N 페스티벌 규정을 확인해주세요.</p>
+                                </div>
+                            </div>
+
+                            <div class="cupCar">
+                                <div class="image-section">
+                                    <div class="image">
+                                        <img src="images/velostercup.png" alt="">
+                                    </div>
+
+                                    <div class="btn-wrap">
+                                        <a href="#none">
+                                            R-tune 신청 바로가기
+                                            <i><img src="images/wheel_icon.png" alt=""></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-box">
+                                    <dl>
+                                        <dt>타이어</dt>
+                                        <dd>넥센타이어 SUR4G 235/40/18</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>휠</dt>
+                                        <dd>
+                                            선택 1&#41; 벨로스터 N 18인치 순정 휠<br/>
+                                            선택 2&#41; ASA N 페스티벌 전용 18인치 휠
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>휠 너트</dt>
+                                        <dd>
+                                            선택 1&#41; 현대 순정 휠너트<br/>
+                                            선택 2&#41; 현대 튜익스 휠너트
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>롤케이지</dt>
+                                        <dd>비셔스 스포츠 4점식 롤케이지</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>브레이크 패드</dt>
+                                        <dd>프론트 : 윈맥스 V3 / V5 &ensp; 리어 : 순정 브레이크 패드</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>견인 고리</dt>
+                                        <dd>견인 고리 마운트 : 벨로스터 N 지정 마운트</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>견인스트랩</dt>
+                                        <dd>
+                                            선택 1&#41; Sparco Tow Strap<br/>
+                                            선택 2&#41; Sabelt Tow Strap</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>소화기</dt>
+                                        <dd>의무 사항 (안전장구류)</dd>
+                                    </dl>
+                                    <p>※ 품번 및 기타 옵션 파츠는 현대 N 페스티벌 규정을 확인해주세요.</p>
+                                </div>
+                            </div>
+
+                            <div class="cupCar">
+                                <div class="image-section">
+                                    <div class="image">
+                                        <img src="images/nline.png" alt="">
+                                    </div>
+
+                                    <div class="btn-wrap">
+                                        <a href="#none">
+                                            R-tune 신청 바로가기
+                                            <i><img src="images/wheel_icon.png" alt=""></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-box">
+                                    <dl>
+                                        <dt>타이어</dt>
+                                        <dd>넥센타이어 SUR4G 225/40/18</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>휠</dt>
+                                        <dd>
+                                            선택 1&#41; 아반떼 N 라인 18인치 순정 휠<br/>
+                                            선택 2&#41; ASA N 페스티벌 전용 18인치 휠
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>휠 너트</dt>
+                                        <dd>
+                                            선택 1&#41; 현대 순정 휠너트<br/>
+                                            선택 2&#41; 현대 튜익스 휠너트
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>롤케이지</dt>
+                                        <dd>N Line 지정 롤케이지</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>브레이크 패드</dt>
+                                        <dd>프론트 : 윈맥스 V3 &ensp; 리어 : 순정 브레이크 패드</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>브레이크 캘리퍼, 로터</dt>
+                                        <dd>프론트 : N 퍼포먼스 브레이크 캘리퍼 &ensp; 리어 : 순정</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>견인 고리</dt>
+                                        <dd>견인 고리 마운트 : 벨로스터 N 지정 마운트</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>견인스트랩</dt>
+                                        <dd>
+                                            선택 1&#41; Sparco Tow Strap<br/>
+                                            선택 2&#41; Sabelt Tow Strap
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>테일 머플러</dt>
+                                        <dd>N Line 지정 머플러</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>배터리</dt>
+                                        <dd>
+                                            선택 1&#41; 순정 배터리<br/>
+                                            선택 2&#41; 아트라스 60L/CCA680A
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>소화기</dt>
+                                        <dd>의무 사항 (안전장구류)</dd>
+                                    </dl>
+                                    <p>※ 품번 및 기타 옵션 파츠는 현대 N 페스티벌 규정을 확인해주세요.</p>
+                                </div>
+                            </div>
+
+                            <div class="cupCar">
+                                <div class="image-section">
+                                    <div class="image">
+                                        <img src="images/avNtt.png" alt="">
+                                    </div>
+
+                                    <div class="btn-wrap">
+                                        <a href="#none">
+                                            R-tune 신청 바로가기
+                                            <i><img src="images/wheel_icon.png" alt=""></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-box">
+                                    <dl>
+                                        <dt>타이어</dt>
+                                        <dd>넥센 타이어 SUR4G 235/40/18</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>휠</dt>
+                                        <dd>ASA N 페스티벌 전용 18인치 휠 (8J+45)</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>휠 너트</dt>
+                                        <dd>
+                                            선택 1&#41; 현대 순정 휠너트<br/>
+                                            선택 2&#41; 현대 튜익스 휠너트
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>브레이크 패드</dt>
+                                        <dd>윈맥스 V3 / V5</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>견인 고리</dt>
+                                        <dd>견인 고리 마운트 : 아반떼 N 지정 마운트</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>견인스트랩</dt>
+                                        <dd>
+                                            선택 1&#41; Sparco Tow Strap<br/>
+                                            선택 2&#41; Sabelt Tow Strap
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>소화기</dt>
+                                        <dd>의무 사항 (안전장구류)</dd>
+                                    </dl>
+                                    <p>※ 품번 및 기타 옵션 파츠는 현대 N 페스티벌 규정을 확인해주세요.</p>
+                                </div>
+                            </div>
+
+                            <div class="cupCar">
+                                <div class="image-section">
+                                    <div class="image">
+                                        <img src="images/velostertt.png" alt="">
+                                    </div>
+
+                                    <div class="btn-wrap">
+                                        <a href="#none">
+                                            R-tune 신청 바로가기
+                                            <i><img src="images/wheel_icon.png" alt=""></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-box">
+                                    <dl>
+                                        <dt>타이어</dt>
+                                        <dd>넥센타이어 SUR4G 235/40/18</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>휠</dt>
+                                        <dd>
+                                            선택 1&#41; 벨로스터 N 18인치 순정 휠<br/>
+                                            선택 2&#41; ASA N 페스티벌 전용 18인치 휠
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>휠 너트</dt>
+                                        <dd>
+                                            선택 1&#41; 현대 순정 휠너트<br/>
+                                            선택 2&#41; 현대 튜익스 휠너트
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>롤케이지</dt>
+                                        <dd>비셔스 스포츠 4점식 롤케이지</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>브레이크 패드</dt>
+                                        <dd>프론트 : 윈맥스 V3 / V5 &ensp; 리어 : 순정 브레이크 패드</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>견인 고리</dt>
+                                        <dd>견인 고리 마운트 : 벨로스터 N 지정 마운트</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>견인스트랩</dt>
+                                        <dd>
+                                            선택 1&#41; Sparco Tow Strap<br/>
+                                            선택 2&#41; Sabelt Tow Strap
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>배터리</dt>
+                                        <dd>
+                                            선택 1&#41; 순정 배터리<br/>
+                                            선택 2&#41; 아트라스 60L/CCA680A
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>소화기</dt>
+                                        <dd>의무 사항 (안전장구류)</dd>
+                                    </dl>
+                                    <p>※ 품번 및 기타 옵션 파츠는 현대 N 페스티벌 규정을 확인해주세요.</p>
+                                </div>
+                            </div>
+                            <div class="cupCar">
+                                <div class="image-section">
+                                    <div class="image">
+                                        <img src="images/nlinett.png" alt="">
+                                    </div>
+
+                                    <div class="btn-wrap">
+                                        <a href="#none">
+                                            R-tune 신청 바로가기
+                                            <i><img src="images/wheel_icon.png" alt=""></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-box">
+                                    <dl>
+                                        <dt>타이어</dt>
+                                        <dd>넥센타이어 SUR4G 235/40/18</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>휠</dt>
+                                        <dd>
+                                            선택 1&#41; 벨로스터 N 18인치 순정 휠<br/>
+                                            선택 2&#41; ASA N 페스티벌 전용 18인치 휠
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>휠 너트</dt>
+                                        <dd>
+                                            선택 1&#41; 현대 순정 휠너트<br/>
+                                            선택 2&#41; 현대 튜익스 휠너트
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>롤케이지</dt>
+                                        <dd>비셔스 스포츠 4점식 롤케이지</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>브레이크 패드</dt>
+                                        <dd>프론트 : 윈맥스 V3 / V5 &ensp; 리어 : 순정 브레이크 패드</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>견인 고리</dt>
+                                        <dd>견인 고리 마운트 : 벨로스터 N 지정 마운트</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>견인스트랩</dt>
+                                        <dd>
+                                            선택 1&#41; Sparco Tow Strap<br/>
+                                            선택 2&#41; Sabelt Tow Strap
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>배터리</dt>
+                                        <dd>
+                                            선택 1&#41; 순정 배터리<br/>
+                                            선택 2&#41; 아트라스 60L/CCA680A
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>소화기</dt>
+                                        <dd>의무 사항 (안전장구류)</dd>
+                                    </dl>
+                                    <p>※ 품번 및 기타 옵션 파츠는 현대 N 페스티벌 규정을 확인해주세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sponsor-wrap">
+                        <article class="sponsor-box">
+                            <div class="top">
+                                <strong>후원사</strong>
+                            </div>
+                            <div class="bottom">
+                                <div class="kumho-box">
+                                    <div class="ku-img">
+                                        <img src="images/kumho.png" alt="">
+                                    </div>
+                                    <p>금호타이어</p>
+                                </div>
+                                <div class="nexen-box">
+                                    <div class="ne-img">
+                                        <img src="images/nexen.png" alt="">
+                                    </div>
+                                    <p>넥센타이어</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="track-wrap">
+                <div class="track-box">
+                    <h1>서킷안내</h1>
+
+                        <ul class="track-list">
+                            <li class="track-tit">
+                                <a href="#none" class="on" id="tit-1">영암 국제자동차경주장(KIC)</a>
+
+                                <ul class="content on" id="content-1">
+                                    <li class="kic-images">
+                                        <img src="images/kictrack.svg" alt="">
+                                    </li>
+                                    <li class="t-left">
+                                        <dl>
+                                            <dt>코스길이</dt>
+                                            <dd>풀 코스 5.615 km, 상설 코스 3.035 km</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>턴 횟수</dt>
+                                            <dd>풀 코스 18, 상설 코스 10</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>안내</dt>
+                                            <dd>
+                                                주소 : 전라남도 영암군 삼호읍 에프원로 2<br/>
+                                                대표 연락처 : 061-288-4207<br/>
+                                                홈페이지 : http://www.koreacircuit.kr
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="t-right">
+                                        <p class="kic"> 
+                                            ※  영암 국제자동차경주장(KIC) 라이선스가 없는 경우 참가 및 추가 교육 진행이 불가합니다. 폰더는 반드시 반납해주세요.<br/>
+                                            ※  사전 주행, 경기 당일 오전 7시부터 메디컬 센터 내에서 소음 측정을 진행합니다.<br/>
+                                                소음 측정 스티커가 발부되지 않은 차량은 코스인 및 주행이 금지됩니다.<br/>
+                                                (배기음이 시끄러운 차나 스티커가 없는 차량은 피트인 후 영암 국제자동차경주장(KIC)에서 소음 측정 후 폰더를<br/>
+                                                반납해주세요.)
+                                            </p>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="track-tit">
+                                <a href="#none" id="tit-2">인제스피디움 서킷</a>
+
+                                <ul class="content" id="content-2">
+                                    <li class="inje-images">
+                                        <img src="images/injetrack.png" alt="">
+                                    </li>
+                                    <li class="t-left">
+                                        <dl>
+                                            <dt>코스길이</dt>
+                                            <dd>3.908 km</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>턴 횟수</dt>
+                                            <dd>19</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>안내</dt>
+                                            <dd>
+                                                주소 : 강원도 인제군 기린면 상하답로 130<br/>
+                                                대표 연락처 : 033-480-9966<br/>
+                                                홈페이지 : http://www.speedium.co.kr
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="t-right">
+                                        <p class="inje"> 
+                                            ※  인제스피디움 라이선스가 없는 경우 참가 및 추가 교육 진행이 불가합니다. 폰더는 반드시 반납해주세요.<br/>
+                                            ※  사전 주행, 경기 당일 오전 7시부터 메디컬 센터 내에서 소음 측정을 진행합니다.<br/>
+                                                소음 측정 스티커가 발부되지 않은 차량은 코스인 및 주행이 금지됩니다.<br/>
+                                                (배기음이 시끄러운 차나 스티커가 없는 차량은 피트인 후 인제스피디움에서 소음 측정 후 폰더를<br/>
+                                                반납해주세요.)
+                                            </p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                </div>
+            </section>
+        </section>
+
+        <!-- footer s -->
+        <footer class="footer-wrap">
+            <article class="footer-group">
+                <div class="footer-top clearfix">
+                    <div class="footer-logo"><img src="images/f_logo.png" alt=""></div>
+                    <div class="left">
+                        <ul class="footer-menu">
+                            <li><a href="#none">이용약관</a></li>
+                            <li><a href="#none">개인정보 처리방침</a></li>
+                            <li><a href="#none">FAQ</a></li>
+                            <li><a href="#none">저작권안내</a></li>
+                            <li><a href="#none">Models</a></li>
+                            <li><a href="#none">Brand</a></li>
+                            <li><a href="#none">Motorsport</a></li>
+                            <li><a href="#none">Exprience</a></li>
+                            <li><a href="#none">Media</a></li>
+                            <li><a href="#none">N Zone</a></li>
+                        </ul>
+                        <ul class="H_link">
+                            <li><a href="#none">Hyundai Motorsport</a></li>
+                            <li><a href="#none">Hyundai Worldwide</a></li>
+                            <li><a href="#none">Hyundai N Collection</a></li>
+                        </ul>
+                        <div class="add">
+                            <p class="f-text">
+                                현대자동차(주)<br/>
+                                대표자명 : 장재훈     사업자등록번호 : 101-81-09147<br/>
+                                주소 : 06797 서울시 서초구 헌릉로 12 (양재동)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="family-group">
+                            <a href="#none" class="familt-btn">Family Site</a>
+                        </div>
+                        <div class="sns-box">
+                            <a href="#none">facebook</a>
+                            <a href="#none">instagram</a>
+                            <a href="#none">youtube</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <div class="footer-bottom">
+                <p class="copy">
+                    COPYRIGHT ⓒ 2021 Hyundai Motor Company. All rights reserved.
+                </p>
+            </div>
+        </footer>
+        <!-- footer e -->
+    </div>
+</body>
+</html>

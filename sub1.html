@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELANTRA N</title>
+
+    <meta name="keywords" content="현대, 현대자동차, hyundai, N, Hyundai N" />
+    <meta name="description" content="현대자동차 N 브랜드" />
+    <meta name="author" content="my" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HYUNDAI N">
+    <meta property="og:description" content="현대자동차 N 브랜드 사이트에 오신것을 환영합니다.">
+    <meta property="og:image" content="https://www.hyundai.com/content/dam/hyundai/ww/en/images/main/hyundai-open-graph-image-pc.jpg" id="og-image-value"/>
+
+    <link rel="icon" href="favicon.png">
+    <link rel="apple-tocuch-icon" href="favicon.png">
+
+    <script src="https://kit.fontawesome.com/5184a0146e.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="js/swiper.js"></script>
+
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/sub1_main.css">
+    <link rel="stylesheet" href="css/mobile.css">
+
+    <script>
+        $(document).ready(function(){
+            var bg = $('<div class=subbg></div>');
+            $('.navbar').after(bg)
+
+            var el = $('.navbar > ul > li > a');
+            el.on({
+            mouseenter:function(){
+                $(this).css('color','#0075ff')
+                $('.subMenu').stop().slideDown();
+            },
+            mouseleave:function(){
+                $(this).css('color','#fff')
+                $('.subMenu').stop().slideUp();
+                }
+            })
+
+            $('.subMenu').on({
+            mouseenter:function(){
+                $('.subMenu').stop().slideDown();
+            },
+            mouseleave:function(){
+                $('.subMenu').stop().slideUp();
+                }
+            })
+
+            // search
+            $('.search-icon').on('click',function(){
+                $('.search-tab').stop().slideDown();
+            })
+            $('.search-close').on('click',function(){
+                $(this).parents().find('.search-tab').slideUp();
+            })
+
+            // cont nav
+            var navOffset = $('.nav-wrap').offset().top;
+            // console.log(navOffset)
+            var cont1 = $('.elantra-main').offset().top;
+            // console.log(cont1)
+            var cont2 = $('.content').offset().top;
+            // console.log(cont2)
+            $(window).scroll(function(){
+                var scrollpos = $(window).scrollTop();
+
+                if(scrollpos >= navOffset){
+                    $('.nav-wrap').css('position','fixed')
+                }else{
+                    $('.nav-wrap').css('position','absolute')
+                }
+            })
+            $('.nav ul li a').on({
+                click:function(e){
+                    e.preventDefault();
+                    var pageNum = $(this).parent().index();
+                    var section = $('.content > div').eq(pageNum)
+                    var offset = section.offset().top;
+
+                    $('html,body').animate({
+                        scrollTop:offset
+                    },600,'easeOutCubic')
+                }
+            })
+
+            // nav 선택창
+            var cont = $('.content > div')
+            var nav = $('.nav ul li')
+            $(window).scroll(function(){
+                var scroll_ = $(this).scrollTop();
+
+                for(var i=0; i<cont.length; i++){
+                    if(scroll_ >= cont.eq(i).offset().top){
+                        nav.removeClass('active');
+                        nav.eq(i).addClass('active')
+                    }
+                }
+            })
+
+            // gallery
+            var galleryTop = new Swiper('.gallery-top', {
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                spaceBetween: 10,
+                loop:true,
+                loopedSlides: 5, //looped slides should be the same     
+            });
+            var galleryThumbs = new Swiper('.gallery-thumbs', {
+                spaceBetween: 10,
+                slidesPerView: 4,
+                touchRatio: 0.2,
+                loop:true,
+                loopedSlides: 5, //looped slides should be the same
+                slideToClickedSlide: true
+            });
+            galleryTop.params.control = galleryThumbs;
+            galleryThumbs.params.control = galleryTop;
+        })
+    </script>
+</head>
+<body>
+    <div id="skip_menu">
+        <a href="#container">본문바로가기</a>
+        <a href="#gnb">주메뉴바로가기</a>
+    </div>
+
+    <div id="wrapper">
+        <header class="header_">
+            <div class="inner clearfix">
+                <div class="menu-group">
+                    <div class="logo">
+                        <a href="index.html"><h1>HYUNDAI N</h1></a>
+                    </div>
+
+                    <nav class="navbar">
+                        <h2 class="skip">주메뉴</h2>
+                        <ul class="main-menu float--left">
+                            <li>
+                                <a href="#none">Models</a>
+                                <ul class="subMenu">
+                                    <li><a href="#none">N</a></li>
+                                    <li><a href="#none">N Line</a></li>
+                                    <li><a href="#none">Rolling Lab</a></li>
+                                    <li><a href="#none">Concept</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="sub2.html">Brand</a>
+                                <ul class="subMenu">
+                                    <li><a href="#none">About N</a></li>
+                                    <li><a href="#none">History</a></li>
+                                    <li><a href="#none">DNA</a></li>
+                                    <li><a href="#none">People</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="sub2.html">Motorsport</a>
+                                <ul class="subMenu">
+                                    <li><a href="#none">WRC</a></li>
+                                    <li><a href="#none">TCR</a></li>
+                                    <li><a href="#none">Nürburgring 24 Hours</a></li>
+                                    <li><a href="#none">Hyundai N Festival</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">Exprience</a>
+                                <ul class="subMenu">
+                                    <li><a href="#none">N Performence</a></li>
+                                    <li><a href="#none">Driving Exprience</a></li>
+                                    <li><a href="#none">WorldSBK</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">Media</a>
+                                <ul class="subMenu">
+                                    <li><a href="#none">N-Zine</a></li>
+                                    <li><a href="#none">Press</a></li>
+                                    <li><a href="#none">Social Lounge</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">N Zone</a>
+                                <ul class="subMenu">
+                                    <li><a href="#none">Ntertainment</a></li>
+                                    <li><a href="#none">N Merchandise</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="link_wrap float--right">
+                            <li><a href="#none"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#none"><i class="fa-brands fa-youtube"></i></a></li>
+                            <div class="search-wrap">
+                                <div class="icon-box">
+                                    <ul class="search-icon">
+                                        <li><a href="#none">검색아이콘</a></li>
+                                    </ul>
+                                </div>
+                                <div class="search-tab">
+                                    <div class="search-form">
+                                        <form action="#" method="post" name="header-search" class="header-search">
+                                            <input type="search" class="search-text" name="search-text" placeholder="검색어를 입력하세요">
+                                            <span class="search-btn"><a href="#none">검색</a></span>
+                                        </form>
+                                        <span class="search-close"><a href="#none">검색창닫기</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="video">
+            <video width="100%" height="auto" id="video" autoplay="'autoplay" loop muted>
+                <source id="movie_src" type="video/mp4" src="video/Hyundai N _ The New Elantra N - Unveiled[1080p] (online-video-cutter.com).mp4">
+            </video>
+            <div class="video-text">
+                <strong>The all-new ELANTRA N</strong>
+                <span>The Ultimate Answer</span>
+            </div>
+        </div>
+
+        <section class="container">
+            <div class="cont-bg">
+                <div class="nav-wrap">
+                    <nav class="nav">
+                        <h1 class="logo">ELANTRA N</h1>
+                        <ul class="gnb">
+                            <li class="active"><a href="#none">Spec</a></li>
+                            <li><a href="#none">Exterior</a></li>
+                            <li><a href="#none">Interior</a></li>
+                            <li><a href="#none">Performence</a></li>
+                            <li><a href="#none">Technology</a></li>
+                            <li><a href="#none">Gallery</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <section class="elantra-main">
+                    <section class="content">
+
+                        <div class="N-spec">
+                            <div class="name">ELANTRA N</div>
+    
+                            <div class="elantra">
+                                <div class="img_box">
+                                    <img src="images/side.png" alt="">
+                                </div>
+                            </div>
+                        
+                            <div class="spec-box">
+                                <div class="power-box">
+                                    <div class="text">
+                                        <strong>POWER</strong>
+                                        <span>280 ps</span>
+                                    </div>
+                                </div>
+                                <div class="torque-box">
+                                    <div class="text">
+                                        <strong>Max. torque</strong>
+                                        <span>40.0 kgf-m</span>
+                                    </div>
+                                </div>
+                                <div class="speed-box">
+                                    <div class="text">
+                                        <strong>0 - 100km/h</strong>
+                                        <span>5.3 seconds (N DCT)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Exterior">
+                            <article class="exTop">
+                                <div class="ex-text">
+                                    <h3>EXTERIOR</h3>
+                                    <strong>숨길 수 없는 강렬한 존재감</strong>
+                                    <p>
+                                        더 낮아지고 와이드해진 디자인에 역동적인 디테일과<br/>
+                                        강렬한 컬러로스포티한 이미지를 더욱 극대화하였습니다.<br/>
+                                        외관은 범퍼, 라디에이터 그릴, 사이드 실 몰딩, 윙타입 리어 스포일러, 듀얼 싱글팁 머플러<br/>
+                                        모두 N 전용 디자인이 적용되었습니다.<br/>
+                                        은은한 광택이 느껴지는 블랙 펄 컬러의 전면 그릴과 립 스포일러, 후면 디퓨저,<br/>
+                                        그리고 넓어진 타이어는 낮고 넓은 차체가 특징인 아반떼 N의 매력을 극대화해주며,<br/>
+                                        윙 타입의 리어 스포일러를 통해 공기 흐름을 최적화하여 가속 성능을 향상시키고<br/>
+                                        빠른 코너 탈출을 도와줍니다.
+                                    </p>
+                                </div>
+                                <div class="front">
+                                    <img src="images/front.png" alt="">
+                                </div>
+                            </article>
+
+                            <article class="exBot">
+                                <div class="rear">
+                                    <img src="images/rear.png" alt="">
+                                </div>
+                                <div class="side">
+                                    <img src="images/2side.png" alt="">
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="Interior">
+                            <article class="IntTop">
+                                <div class="inte1">
+                                    <img src="images/inte1.png" alt="">
+                                </div>
+                                <div class="Int-text">
+                                    <h3>INTERIOR</h3>
+                                    <strong>차량 성능에 온전히 몰입할 수 있는 드라이버 중심의 인테리어</strong>
+                                    <p>
+                                        와이드하고 슬림한 레이아웃에 N 전용 디테일과 컬러를 적용하여<br/>
+                                        고성능 퍼포먼스의 인테리어 컨셉을 구현하였습니다.<br/>
+                                        N 전용 버킷 시트와 10mm 낮아진 시트 포지션은 N 모델 중 가장 낮은 시트 포지션을 제공하며,<br/>
+                                        무게 중심 또한 낮아졌습니다. 드라이버는 더욱 극대화된 차량과의 일체감을 느낄 수 있으며,<br/>
+                                        기본 모델의 탁월함을 그대로 간직한 아반떼 N은 동급 모델 중 가장 넓고 여유로운<br/>
+                                        뒷좌석 공간을 제공합니다.
+                                    </p>
+                                </div>
+                            </article>
+                            <article class="IntBot">
+                                <div class="inte2">
+                                    <img src="images/inte2.png" alt="">
+                                </div>
+                                <div class="inte3">
+                                    <img src="images/inte3.png" alt="">
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="Performence-section">
+                            <div class="perfor-box">
+                                <div class="perfor-txt">
+                                    <h3>Performence</h3>
+                                    <strong>The most advanced and balanced N</strong>
+                                    <p>
+                                        엘란트라 N은 8단 습식 듀얼 클러치 변속기와 6단 수동 변속기를 갖춘 2.0L 터보 GDI 엔진을 장착하고 있습니다.<br/>
+                                        파워트레인의 최대 출력은 280 ps이고, 최대 토크는 40 kgf·m 입니다.<br/>
+                                        동력을 고르게 생산하는 엔진 덕분에 높은 RPM에서 오랫동안 최대 출력을 유지하고,<br/>
+                                        가속 성능 향상을 통해 도로에서도, 레이싱 트랙에서도 한층 신나는 주행 경험을 만끽할 수 있습니다.<br/>
+                                        8단 습식 듀얼 클러치 변속기는 N에서만 경험할 수 있는 세가지 특화 기능(NGS, NPS, NTS) 을 제공하고,<br/>
+                                        6단 수동 변속기는 레브 매칭 기술을 적용하여, 부드러운 변속을 가능케 합니다.
+                                    </p>
+                                </div>
+
+                                <div class="engine-box">
+                                    <div class="engine-img">
+                                        <img src="images/turbo_gdi_engine1.png" alt="">
+                                    </div>
+                                    <div class="engine-text">
+                                        <div class="cont1">
+                                            <strong>N전용 가솔린 2.0 터보 플렛파워 엔진</strong>
+                                            <span class="power">최고출력</span>
+                                            <span class="HP">280 PS / 5,500 ~ 6,000 RPM</span>
+                                            <p>*NGS 사용시 290 PS</p>
+                                        </div>
+                                        <div class="cont2">
+                                            <span>최대토크</span>
+                                            <span class="txt2">40.0kgf.m  / 2,100 ~ 4,700 RPM</span>
+                                        </div>
+                                        <div class="cont3">
+                                            <span>0 - 100km/h</span>
+                                            <span class="seconds">5.3 seconds (N DCT)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-section">
+                            <div class="tech-box">
+                                <h3>Technology</h3>
+
+                                <article class="tech_1">
+                                    <div class="tech-list1 elsd elsd-val">
+                                        <div class="img1">
+                                            <img src="images/Elsd.svg" alt="">
+                                        </div>
+                                        <div class="te-text">
+                                            <span>전자식 차동 제한 장치(ELSD)</span>
+                                        </div>
+                                    </div>
+                                    <div class="tech-list ecs ecs-val">
+                                        <div class="img">
+                                            <img src="images/ECS.svg" alt="">
+                                        </div>
+                                        <div class="te-text">
+                                            <span>2세대 전자 제어 서스펜션 (ECS)</span>
+                                            <span>Dual Compound Bush</span>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="tech_2">
+                                    <div class="tech-list1 ida ida-val">
+                                        <div class="img1">
+                                            <img src="images/IDA.svg" alt="">
+                                        </div>
+                                        <div class="te-text">
+                                            <span class="rear-bar">리어 스티브 바</span>
+                                            <span>기능 통합형 드라이브 액슬 (IDA)</span>
+                                        </div>
+                                    </div>
+                                    <div class="tech-list ag ag-val">
+                                        <div class="img">
+                                            <img src="images/AG.svg" alt="">
+                                        </div>
+                                        <div class="te-text">
+                                            <span>Air Guide</span>
+                                            <span>Dust CoverCooling Hole</span>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="tech_3">
+                                    <div class="tech-list1 bd bd-val">
+                                        <div class="img1">                               
+                                            <img src="images/break.svg" alt="">
+                                        </div> 
+                                        <div class="te-text">
+                                            <span>Larger Brake Discs</span>
+                                        </div>
+                                    </div>
+                                    <div class="tech-list eq eq-val">
+                                        <div class="img">
+                                            <img src="images/soundEQ.png" alt="">
+                                        </div>
+                                        <div class="te-text">
+                                            <span>N Sound Equalizer</span>
+                                            <span>Linear Variable Exhaust Valve System</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="photo-slider">
+                            <h1 class="slider-title">GALLERY</h1>
+                            <div class="swiper-container gallery-top">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" style="background-image:url(images/gallery1.png)"></div>
+                                    <div class="swiper-slide" style="background-image:url(images/gallery2.png)"></div>
+                                    <div class="swiper-slide" style="background-image:url(images/gallery3.png)"></div>
+                                    <div class="swiper-slide" style="background-image:url(images/gallery4.png)"></div>
+                                    <div class="swiper-slide" style="background-image:url(images/gallery5.png)"></div>
+                                    <div class="swiper-slide" style="background-image:url(images/gallery6.jpg)"></div>
+                                    <div class="swiper-slide" style="background-image:url(images/gallery7.jpg)"></div>
+                                </div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next swiper-button-white"></div>
+                                <div class="swiper-button-prev swiper-button-white"></div>
+                            </div>
+                            <div class="swiper-container gallery-thumbs">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" style="background-image:url(images/gallery1.png)"></div>
+                                    <div class="swiper-slide" style="background-image:url(images/gallery2.png)"></div>
+                                    <div class="swiper-slide" style="background-image:url(images/gallery3.png)"></div>
+                                    <div class="swiper-slide" style="background-image:url(images/gallery4.png)"></div>
+                                    <div class="swiper-slide" style="background-image:url(images/gallery5.png)"></div>
+                                    <div class="swiper-slide" style="background-image:url(images/gallery6.jpg)"></div>
+                                    <div class="swiper-slide" style="background-image:url(images/gallery7.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sub-wrap">
+                        <div class="N">
+                            <div class="N-box">
+                                <a href="#none">
+                                    <div class="f-image">
+                                        <img src="images/N.png" alt="">
+                                    </div>
+                                    <div class="n-text">
+                                        <p>N</p>
+                                        <p class="tx">From Roads to Tracks</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="N-box">
+                                <a href="#none">
+                                    <div class="f-image">
+                                        <img src="images/Nline1.png" alt="">
+                                    </div>
+                                    <div class="n-text">
+                                        <p>N line</p>
+                                        <p class="tx">Be  Inspired by N</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="N-box">
+                                <a href="#none">
+                                    <div class="f-image">
+                                        <img src="images/RollingLab.png" alt="">
+                                    </div>
+                                    <div class="n-text">
+                                        <p>Rolling Lab</p>
+                                        <p class="tx">Discover what’s just beyond<br/> the horizon</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </section>
+
+        <!-- footer s -->
+        <footer class="footer-wrap">
+            <article class="footer-group">
+                <div class="footer-top clearfix">
+                    <div class="footer-logo"><img src="images/f_logo.png" alt=""></div>
+                    <div class="left">
+                        <ul class="footer-menu">
+                            <li><a href="#none">이용약관</a></li>
+                            <li><a href="#none">개인정보 처리방침</a></li>
+                            <li><a href="#none">FAQ</a></li>
+                            <li><a href="#none">저작권안내</a></li>
+                            <li><a href="#none">Models</a></li>
+                            <li><a href="#none">Brand</a></li>
+                            <li><a href="#none">Motorsport</a></li>
+                            <li><a href="#none">Exprience</a></li>
+                            <li><a href="#none">Media</a></li>
+                            <li><a href="#none">N Zone</a></li>
+                        </ul>
+                        <ul class="H_link">
+                            <li><a href="#none">Hyundai Motorsport</a></li>
+                            <li><a href="#none">Hyundai Worldwide</a></li>
+                            <li><a href="#none">Hyundai N Collection</a></li>
+                        </ul>
+                        <div class="add">
+                            <p class="f-text">
+                                현대자동차(주)<br/>
+                                대표자명 : 장재훈     사업자등록번호 : 101-81-09147<br/>
+                                주소 : 06797 서울시 서초구 헌릉로 12 (양재동)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="family-group">
+                            <a href="#none" class="familt-btn">Family Site</a>
+                        </div>
+                        <div class="sns-box">
+                            <a href="#none">facebook</a>
+                            <a href="#none">instagram</a>
+                            <a href="#none">youtube</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <div class="footer-bottom">
+                <p class="copy">
+                    COPYRIGHT ⓒ 2021 Hyundai Motor Company. All rights reserved.
+                </p>
+            </div>
+        </footer>
+        <!-- footer e -->
+    </div>
+</body>
+</html>

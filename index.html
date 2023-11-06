@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N main</title>
+
+    <meta name="keywords" content="현대, 현대자동차, hyundai, N, Hyundai N" />
+    <meta name="description" content="현대자동차 N 브랜드" />
+    <meta name="author" content="my" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HYUNDAI N">
+    <meta property="og:description" content="현대자동차 N 브랜드 사이트에 오신것을 환영합니다.">
+    <meta property="og:image" content="https://www.hyundai.com/content/dam/hyundai/ww/en/images/main/hyundai-open-graph-image-pc.jpg" id="og-image-value"/>
+
+    <link rel="icon" href="favicon.png">
+    <link rel="apple-tocuch-icon" href="favicon.png">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="js/swiper.js"></script>
+
+    <script src="https://kit.fontawesome.com/5184a0146e.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mobile.css">
+
+    <script>
+        $(document).ready(function(){
+            var bg = $('<div class=subbg></div>');
+            $('.navbar').after(bg)
+
+            var el = $('.navbar > ul > li > a');
+            el.on({
+            mouseenter:function(){
+                $(this).css('color','#0075ff')
+                $('.subMenu').stop().slideDown();
+            },
+            mouseleave:function(){
+                $(this).css('color','#fff')
+                $('.subMenu').stop().slideUp();
+                }
+            })
+
+            $('.subMenu').on({
+            mouseenter:function(){
+                $('.subMenu').stop().slideDown();
+            },
+            mouseleave:function(){
+                $('.subMenu').stop().slideUp();
+                }
+            })
+
+            // search
+            $('.search-icon').on('click',function(){
+                $('.search-tab').stop().slideDown();
+            })
+            $('.search-close').on('click',function(){
+                $(this).parents().find('.search-tab').slideUp();
+            })
+
+            // model
+            $('.center').slick({
+				slide: 'div',
+				infinite : true,		 
+				slidesToShow : 3,	
+				slidesToScroll : 1,
+				speed : 100,
+				arrows : false,
+				dots : false,
+				autoplay : false,
+				pauseOnHover : false,
+				vertical : false,
+				dotsClass : false,
+				draggable : true,
+				
+				responsive: [
+					{  
+						breakpoint: 1024,
+						settings: {
+							slidesToShow : 3
+						} 
+					},
+					{ 
+						breakpoint: 360,
+						settings: {	
+							slidesToShow:1,
+                            arrows : false
+						} 
+					}
+				]
+
+			});
+
+            // motorsport
+            $('.multiple-items').slick({
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll:1,
+                prevArrow : false,
+				nextArrow : false,
+                dotsClass : "control-btn",
+                draggable : true,
+                autoplay : false,
+
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slideToShow:2
+                        }
+                    },
+                    { 
+						breakpoint: 360,
+						settings: {	
+							slidesToShow:1,
+						} 
+					}
+                ]
+            });
+
+            // mobile
+            $('.m-btn').on('click',function(){
+                $('.m-nav-wrap').stop().slideDown();
+            })
+            $('.m-nav-wrap').on('click',function(){
+                $(this).parents().find('.m-nav-wrap').slideUp();
+            })
+        })
+    </script>
+
+</head>
+<body>
+    <div id="skip_menu">
+        <a href="#container">본문바로가기</a>
+        <a href="#gnb">주메뉴바로가기</a>
+    </div>
+
+    <div id="wrapper">
+        <header class="header_">
+            <div class="inner clearfix">
+                <div class="menu-group">
+                    <div class="logo">
+                        <a href="#none"><h1>HYUNDAI N</h1></a>
+                    </div>
+
+                    <nav class="navbar">
+                        <h2 class="skip">주메뉴</h2>
+                        <ul class="main-menu float--left">
+                            <li>
+                                <a href="sub1.html">Models</a>
+                                <ul class="subMenu">
+                                    <li><a href="#none">N</a></li>
+                                    <li><a href="#none">N Line</a></li>
+                                    <li><a href="#none">Rolling Lab</a></li>
+                                    <li><a href="#none">Concept</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">Brand</a>
+                                <ul class="subMenu">
+                                    <li><a href="#none">About N</a></li>
+                                    <li><a href="#none">History</a></li>
+                                    <li><a href="#none">DNA</a></li>
+                                    <li><a href="#none">People</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="sub2.html">Motorsport</a>
+                                <ul class="subMenu">
+                                    <li><a href="#none">WRC</a></li>
+                                    <li><a href="#none">TCR</a></li>
+                                    <li><a href="#none">Nürburgring 24 Hours</a></li>
+                                    <li><a href="#none">Hyundai N Festival</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">Exprience</a>
+                                <ul class="subMenu">
+                                    <li><a href="#none">N Performence</a></li>
+                                    <li><a href="#none">Driving Exprience</a></li>
+                                    <li><a href="#none">WorldSBK</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">Media</a>
+                                <ul class="subMenu">
+                                    <li><a href="#none">N-Zine</a></li>
+                                    <li><a href="#none">Press</a></li>
+                                    <li><a href="#none">Social Lounge</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">N Zone</a>
+                                <ul class="subMenu">
+                                    <li><a href="#none">Ntertainment</a></li>
+                                    <li><a href="#none">N Merchandise</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="link_wrap float--right">
+                            <li><a href="#none"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#none"><i class="fa-brands fa-youtube"></i></a></li>
+                            <div class="search-wrap">
+                                <div class="icon-box">
+                                    <ul class="search-icon">
+                                        <li><a href="#none">검색아이콘</a></li>
+                                    </ul>
+                                </div>
+                                <div class="search-tab">
+                                    <div class="search-form">
+                                        <form action="#" method="post" name="header-search" class="header-search">
+                                            <input type="search" class="search-text" name="search-text" placeholder="검색어를 입력하세요">
+                                            <span class="search-btn"><a href="#none">검색</a></span>
+                                        </form>
+                                        <span class="search-close"><a href="#none">검색창닫기</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="m-btn-wrap">
+                <div class="m-btn none">
+                    <h2 class="skip">메뉴</h2>
+                    <a href="#none">
+                        <span></span>
+                        <!-- <i class="fa-solid fa-bars"></i> -->
+                    </a>
+                </div>
+                
+                <nav class="m-nav-wrap none">
+                    <ul class="m-deth-1">
+                        <li><a href="sub1.html">Models</a></li>
+                        <li><a href="#none">Brand</a></li>
+                        <li><a href="sub2.html">Motorsport</a></li>
+                        <li><a href="#none">Exprience</a></li>
+                        <li><a href="#none">Media</a></li>
+                        <li><a href="#none">N Zone</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="video">
+            <video width="100%" height="auto" id="video" autoplay="'autoplay" loop muted>
+                <source id="movie_src" type="video/mp4" src="video/Hyundai N _ N Vision 74 Performance Film.mp4">
+            </video>
+            <div class="video-text">
+                <strong>N Vision 74</strong>
+                <span>First Hydrogen Hybrid Rolling Lab</span>
+            </div>
+        </div>
+
+        <section class="container">
+            <!-- model s -->
+            <section class="model-wrap">
+                <div class="model-bg">
+                    <div class="model-group">
+                        <h1>ALL N MODEL</h1>
+                        <div class="center">
+                            <div class="car">
+                                <a href="sub1.html">
+                                    <img src="images/car1_on.png" alt="">
+                                    
+                                    <div class="model-text">
+                                        <strong>2023 Hyundai</strong>
+                                        <span>Elantra <em>N</em></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="car">
+                                <a href="sub1.html">
+                                    <img src="images/car2_on.png" alt="">
+                                    
+                                    <div class="model-text">
+                                        <strong>2022 Hyundai</strong>
+                                        <span>Veloster <em>N</em></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="car">
+                                <a href="sub1.html">
+                                    <img src="images/car3_on.png" alt="">
+                                    
+                                    <div class="model-text">
+                                        <strong>2022 Hyundai</strong>
+                                        <span>Cona <em>N</em></span>
+                                    </div>
+                                </a>                                
+                            </div>
+                            <div class="car">
+                                <a href="#none">
+                                    <img src="images/car4_on.png" alt="">
+                                    
+                                    <div class="model-text">
+                                        <strong>2023 Hyundai</strong>
+                                        <span>Ioinq5 <em>N</em></span>
+                                    </div>
+                                </a>                               
+                            </div>
+                            <div class="car">
+                                <a href="#none">
+                                    <img src="images/car5_on.png" alt="">
+                                    
+                                    <div class="model-text">
+                                        <strong>2023 Hyundai</strong>
+                                        <span>i30 <em>N</em></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="car">
+                                <a href="#none">
+                                    <img src="images/car6_on.png" alt="">
+                                    
+                                    <div class="model-text">
+                                        <strong>2023 Hyundai</strong>
+                                        <span>i20 <em>N</em></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <span class="n-logo"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Nhome s -->
+            <section class="Nhome-wrap">
+                <article class="Nhome-visual">
+                    <ul>
+                        <li class="Ncontent1">
+                            <div class="text-wrap">
+                                <strong class="Nhome-title">
+                                    Born in Namyang,<br/>
+                                    Honed at Nürburgring
+                                </strong>
+                                <a href="#none">
+                                    <span class="Nhome-btn">Learn More<i></i></span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="Ncontent2">
+                            <a href="#none">
+                                <div class="Nhome-logo">
+                                    <h1><img src="images/Nhome_logo.png" alt=""></h1>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <!-- Nhome e -->
+
+            <!-- motorsport s -->
+            <section class="motorsport-wrap">
+                <div class="motor-bg">
+                    <div class="motorsport-box">
+                        <h3 class="motor-title">Motorsport</h3>
+
+                        <div class="multiple-items">
+                            <div>
+                                <a href="#none">
+                                    <div class="WRC-wrap">
+                                        <div class="motor-box">
+                                            <strong class="title">WRC</strong>
+                                            <span class="text">
+                                                The Ultimate Challenge<br/>
+                                                on The Most Rigorous Roads
+                                            </span>
+                                            <span class="WRC-btn mbtn">Learn More</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#none">
+                                    <div class="TCR-wrap">
+                                        <div class="motor-box">
+                                            <strong class="title">TCR</strong>
+                                            <span class="text">
+                                                Taking The Pole Position
+                                            </span>
+                                            <span class="TCR-btn mbtn">Learn More</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#none">
+                                    <div class="Nfesta-wrap">
+                                        <div class="motor-box">
+                                            <strong class="title Festa-tit">HYUNDAI N Festival</strong>
+                                            <span class="text Festa-txt">
+                                                국내 최대 규모의 원메이크 레이스입니다.
+                                            </span>
+                                            <span class="Nfesta-btn mbtn">Learn More</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#none">
+                                    <div class="NUR-wrap">
+                                        <div class="motor-box">
+                                            <strong class="title">24 Hours Nürburgring</strong>
+                                            <span class="text">
+                                                24-hour Endurance Race at"The Green Hell"
+                                            </span>
+                                            <span class="24H-btn mbtn">Learn More</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- motorsport e -->
+
+            <!-- inquriy s -->
+            <section class="inquiry">
+                <h2 class="skip">Hyundai colliction</h2>
+                <div class="inquiry-cont">
+                    <h3 class="inquiry-title">Hyundai N Collection</h3>
+                    <p>N collection that will bring you joy beyond driving</p>
+                    <a href="#none" class="inquiry-more-btn">Learn More</a>
+                </div>
+            </section>
+            <!-- inquriy e -->
+
+            <!-- social s -->
+            <div class="social-wrap">
+                <section class="social-group clearfix">
+                    <h3 class="social-title">Social Lounge</h3>
+
+                    <article class="social-list">
+                        <div class="cont1 social-box">
+                            <a href="#none">
+                                <div class="social-txt">
+                                    <p>현대 헤리티지:포니의 역사를 되짚다</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cont2 social-box">
+                            <a href="#none">
+                                <div class="social-txt">
+                                    <p>Never Just Drive</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cont3 social-box">
+                            <a href="#none">
+                                <div class="social-txt">
+                                    <p>2022년 베스트 N</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="cont4 social-box">
+                            <a href="#none">
+                                <div class="social-txt">
+                                    <p>
+                                        N Vision 74<br/>
+                                        Back to the Future
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cont5 social-box">
+                            <a href="#none">
+                                <div class="social-txt">
+                                    <p>N Festa enjoy the car</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cont6 social-box">
+                            <a href="#none">
+                                <div class="social-txt">
+                                    <p>
+                                        소나타 디 엣지 : 지금까지의 경험은 잊어라!<br/>
+                                        더 새로워진 소나타를 만나보세요.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </article>
+                    <p class="social-btn"><a href="#none">Learn More</a></p>
+                </section>
+            </div>
+            <!-- social e -->
+        </section>
+
+        <!-- footer s -->
+        <footer class="footer-wrap">
+            <article class="footer-group">
+                <div class="footer-top clearfix">
+                    <div class="footer-logo"><img src="images/f_logo.png" alt=""></div>
+                    <div class="left">
+                        <ul class="footer-menu">
+                            <li><a href="#none">이용약관</a></li>
+                            <li><a href="#none">개인정보 처리방침</a></li>
+                            <li><a href="#none">FAQ</a></li>
+                            <li><a href="#none">저작권안내</a></li>
+                            <li><a href="#none">Models</a></li>
+                            <li><a href="#none">Brand</a></li>
+                            <li><a href="#none">Motorsport</a></li>
+                            <li><a href="#none">Exprience</a></li>
+                            <li><a href="#none">Media</a></li>
+                            <li><a href="#none">N Zone</a></li>
+                        </ul>
+                        <ul class="H_link">
+                            <li><a href="#none">Hyundai Motorsport</a></li>
+                            <li><a href="#none">Hyundai Worldwide</a></li>
+                            <li><a href="#none">Hyundai N Collection</a></li>
+                        </ul>
+                        <div class="add">
+                            <p class="f-text">
+                                현대자동차(주)<br/>
+                                대표자명 : 장재훈     사업자등록번호 : 101-81-09147<br/>
+                                주소 : 06797 서울시 서초구 헌릉로 12 (양재동)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="family-group">
+                            <a href="#none" class="familt-btn">Family Site</a>
+                        </div>
+                        <div class="sns-box">
+                            <a href="#none">facebook</a>
+                            <a href="#none">instagram</a>
+                            <a href="#none">youtube</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <div class="footer-bottom">
+                <p class="copy">
+                    COPYRIGHT ⓒ 2021 Hyundai Motor Company. All rights reserved.
+                </p>
+            </div>
+        </footer>
+        <!-- footer e -->
+    </div>
+</body>
+</html>

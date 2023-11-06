@@ -1,0 +1,449 @@
+@charset "utf-8";
+
+.container{
+    position: relative;
+    width: 100%;
+    min-width: 1200px;
+}
+.main-section{
+    position: relative;
+    width: 100%;
+    z-index: -99;
+}
+.main{
+    position: relative;
+    width: 100%;
+    height: 930px;
+    background: url(../images/nfestival-bg\ 1.png) no-repeat;
+    background-size: cover;
+}
+.main:before{
+    content: '';
+    position: absolute;
+    background: url(../images/nfestival-bg\ 2.png) no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.main-text{
+    position: absolute;
+    top: 112px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+}
+.main-text strong{
+    font-family: 'inter',sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 5;
+}
+.main-text p{
+    font-size: 30px;
+}
+
+.title{
+    width: 1200px;
+    margin: 226px auto;
+}
+.title h1{
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 49px;
+}
+
+.OMR-pic{
+    float: left;
+    margin-right: 58px;
+}
+.OMR-text{
+    margin-top: 80px;
+    font-size: 16px;
+    line-height: 2.5;
+}
+
+.Nfesta-wrap{
+    width: 100%;
+    height: 100%;
+}
+
+.Nfesta-bg{
+    position: relative;
+    width: 100%;
+    min-width: 1200px;
+    height: 1700px;
+    background: url(../images/Festa-bg.png) no-repeat left center;
+    background-size: cover;
+}
+.race-office,
+.track-wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+.Nfesta-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 1200px;
+    margin: 0 auto;
+}
+.festa-top{
+    padding-top: 110px;
+    text-align: center;
+    color: #fff;
+}
+.festa-top h1{
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 54px;
+}
+.festa-top span{
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 2.5rem;
+}
+.festa-list{
+    margin-top: 104px;
+}
+
+.festa-left{
+    float: left;
+    margin-right: 223px;
+}
+.left-title,
+.right-title{
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 49px;
+}
+
+.left-text{
+    margin-top: 29px;
+    color: #fff;
+    line-height: 2.0;
+    font-weight: 700;
+    font-size: 14px;
+}
+.left-text span {font-weight: 400;}
+.right-text{
+    margin-top: 29px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.8;
+}
+.right-text .step1,
+.right-text .step2{
+    margin-top: 14px;
+    line-height: 1.5;
+}
+.right-text .step1 span,
+.right-text .step2 span{
+    font-size: 18px;
+}
+.right-text p {font-weight: 400;}
+.festa-bottom{
+    margin-top: 119px;
+}
+.festa-bottom > div{
+    float: left;
+    margin-right:51.2px;
+}
+.festa-bottom > div:last-child{margin-right: 0;}
+.festa-bottom .txt{
+    letter-spacing: -0.05rem;
+}
+.Ncup,
+.Nlinecup{
+    width: 349px;
+    height: 355px;
+}
+
+.Ncup-text h1,
+.VNcup-text h1,
+.Nlinecup-text h1{
+    margin-top: 27px;
+    font-size: 20px;
+    color: #fff;
+}
+.Ncup-text p,
+.VNcup-text p,
+.Nlinecup-text p{
+    padding-top: 31px;
+    font-size: 14px;
+    letter-spacing: -0.12rem;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.race-office{
+    margin-top: 254px;
+    height: 880px;
+}
+.race-office h1{
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 72px;
+}
+.office-left{
+    float: left;
+    margin-right: 89px;
+}
+.office-left h3,
+.office-right h3{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.office-left > div{
+    margin-top: 30px;
+}
+.office-left > div strong{
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+}
+.office-left > div span{
+    font-size: 16px;
+    font-weight: 600;
+}
+.office-left > div p{
+    line-height: 1.8;
+    font-size: 15px;
+}
+.office-left > div .velN_{
+    font-size: 10px;
+}
+
+.office-right{
+    padding-top: 70px;
+}
+
+.step-box{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.step-box > div{
+    margin-top: 20px;
+}
+.step-box > div strong{
+    font-size: 20px;
+    font-weight: 600;
+}
+.step-box > div p{font-size: 15px;}
+
+.cost strong{
+    font-size: 20px;
+    font-weight: 600;
+}
+.cost > div{
+    margin-bottom: 20px;
+}
+.cost > div span{
+    font-size: 18px;
+    font-weight: 600;
+}
+.cost > div p{
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.R-tune-wrap{
+    margin-top: 250px;
+}
+.R-bg{
+    position: relative;
+    width: 100%;
+    min-width: 1200px;
+    height: 1190px;
+    background: url(../images/tune-bg.png) no-repeat;
+    background-size: cover;
+}
+.R-tuneBox{
+    width: 1200px;
+    height: 760px;
+    margin: 0 auto;
+}
+.R-tuneBox h3{
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    padding: 64px 0;
+}
+.R-tuneBox .R-list{
+    width: 1200px;
+}
+.R-tuneBox .R-list a.on{
+    color: #5498ff;
+}
+.R-tuneBox > ul > li{
+    float: left;
+    font-size: 18px;
+    width: 200px;
+    height: 80px;
+    line-height: 80px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.R-tuneBox > ul > li > a{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+.carList{
+    width: 1200px;
+    margin-top: 114px;
+}
+.cupCar{
+    height: 498px;
+    display: none;
+}
+.cupCar.on{
+    display: block;
+}
+.cupCar > div{
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+}
+.image-section{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.btn-wrap{
+    width: 283px;
+    height: 56px;
+    margin-left: 100px;
+}
+.btn-wrap a{
+    background-color: #d9d9d9;
+    border-radius: 50px;
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 20px;
+}
+.btn-wrap a i img{
+    margin-top: -4px;
+}
+
+.text-box dl{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 14px;
+    line-height: 1.1;
+    text-align: left;
+}
+.text-box dt{
+    width: 160px;
+    min-width: 160px;
+}
+.text-box p{
+    font-size: 12px;
+}
+
+.sponsor-wrap{
+    margin-top: 120px;
+    border-top: 1px solid #e1e1e1;
+}
+.sponsor-box{
+    width: 1200px;
+    margin: 0 auto;
+}
+.top{
+    padding: 24px 0px 19px 0px;
+    color: #fff;
+    font-size: 20px;
+}
+.kumho-box{
+    float: left;
+    margin-right: 30px;
+}
+.kumho-box p,
+.nexen-box p{
+    padding-top: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.track-wrap{
+    margin-top: 100px;
+}
+.track-box{
+    position: relative;
+    height: 900px;
+}
+.track-box h1{
+    margin-bottom: 42px;
+    font-size: 50px;
+}
+.track-list .track-tit{
+    margin: 0px 55px 0px 0px;
+    margin-bottom: 51px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.track-list > li{
+    float: left;
+}
+.track-list li > a.on{
+    color: #ff0000;
+}
+
+.track-list .content{
+    position: absolute;
+    top: 190px;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+.track-list .content.on{display: block;}
+
+.t-left{
+    float: left;
+    margin-right: 140px;
+    margin-top: 20px;
+    width: 410px;
+    height: 167px;
+}
+.t-right{
+    margin-right: 0;
+    margin-top: 42px;
+    line-height: 2;
+}
+.t-right .kic{
+    letter-spacing: -0.01rem;
+}
+
+.track-list .content dl{
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+}
+.track-list .content dl dt{
+    width: 120px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 2.7;
+    margin-top: -6px;
+}
+.track-list .content dl dd{
+    font-size: 13px;
+    line-height: 1.5;
+    padding-top: 12px;
+}
+
+.track-list .content p{font-size: 12px;}
