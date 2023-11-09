@@ -11,6 +11,8 @@
     position: relative;
     z-index: -99;
     min-width: 1200px;
+    margin-top: -50px;
+    background-color: #000;
 }
 .video-text{
     position: absolute;
@@ -19,7 +21,7 @@
     right: 0;
     bottom: 0;
     margin-left: 10.625rem;
-    margin-top: 300px;
+    margin-top: 420px;
 }
 .video-text strong{
     display: block;
@@ -28,38 +30,35 @@
     color: #fff;
     letter-spacing: -0.09rem;
 }
-.video-text span{
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #fff;
-}
-
 .model-wrap {
     position: relative;
-    margin-top: 50px;
+    padding-top: 100px;
+    background-color: #000;
 }
-.model-wrap:before {
+
+.model-bg{
+    position: relative;
+    background: url(../images/model_bg.png) no-repeat top center;
+    background-size: cover;
+    width: 100%;
+}
+.model-bg:before {
     content: '';
     display: block;
     position: absolute;
     left: 0;
-    top: 74%;
+    top: 64%;
     width: 100%;
     height: 3px;
     border-radius: 30px;
     background: linear-gradient(157deg, rgba(255,0,0,1) 0%, rgba(255,0,196,1) 23%, rgba(0,255,254,0.8169642857142857) 51%, rgba(0,255,27,0.7665441176470589) 78%, rgba(0,3,255,1) 100%);
 }
 
-.model-bg{
-    background: url(../images/model_bg.png) no-repeat top center;
-    background-size: cover;
-    width: 100%;
-}
 .model-group{
     position: relative;
     margin: 0 auto;
     width: 1200px;
-    height: 510px;
+    height: 610px;
 }
 .model-group h1{
     font-size: 3.125rem;
@@ -84,7 +83,7 @@
 .center .n-logo{
     position: absolute;
     left: 50%;
-    bottom: 60px;
+    bottom: 70px;
     transform: translateX(-50%);
     width: 32px;
     height: 32px;
@@ -105,7 +104,7 @@
 .center div.car a .model-text{
     width: 308px;
     height: 57px;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-right: 50px;
 }
 .center div.car a strong{
@@ -454,5 +453,5 @@
 }
 .social-group .social-btn:hover{
     background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
 }
+.social-group .social-btn a:hover {color: #fff;}
